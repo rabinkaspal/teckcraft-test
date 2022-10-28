@@ -17,7 +17,7 @@ const Facts = () => {
     <Container>
       <h1>Cat Facts</h1>
       <FactCard />
-      <CatFactsButton text="Get a New Fact" btnOnClick={() => dispatch(fetchCatFact())} />
+      <CatFactsButton text="Get a New Fact" btnOnClick={() => dispatch(fetchCatFact())} loading={state.isLoading} />
       <p className="counter">Total Facts Displayed: {state.apiCallCount}</p>
     </Container>
   );

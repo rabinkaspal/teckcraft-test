@@ -5,12 +5,18 @@ import factReducer from "../features/catFact/factSlice";
 
 const saga = createSagaMiddleware();
 
-const store = configureStore({
-  reducer: {
-    factState: factReducer,
-  },
-  middleware: [saga],
-});
+export const setupStore = preloadedState => {
+  return configureStore({
+    reducer: {
+      factState: factReducer,
+    },
+    preloadedState,
+    middleware: [saga],
+  });
+};
+
+const store = setupStore();
 
 saga.run(catSaga);
+
 export default store;

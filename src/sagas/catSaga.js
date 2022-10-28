@@ -1,4 +1,4 @@
-import { takeEvery, call, put } from "redux-saga/effects";
+import { takeEvery, call, put, all, fork } from "redux-saga/effects";
 import * as FactAPI from "../features/catFact/factService";
 import { fetchCatFactFailure, fetchCatFactSuccess } from "../features/catFact/factSlice";
 
@@ -19,4 +19,8 @@ function* catSaga() {
   yield takeEvery("catfact/fetchCatFact", fetchCatFact);
 }
 
-export default catSaga;
+export { fetchCatFact };
+
+export default function* catFactSaga() {
+  yield all([fork(catSaga)]);
+}

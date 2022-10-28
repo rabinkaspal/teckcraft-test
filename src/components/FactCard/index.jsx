@@ -6,7 +6,6 @@ import { useSelector } from "react-redux";
 import { AnimatePresence, motion } from "framer-motion";
 
 const FactCard = () => {
-  console.log("card re render");
   const factState = useSelector(state => state.factState);
   return (
     <FactContainer>
@@ -21,8 +20,9 @@ const FactCard = () => {
           />
         ) : (
           <motion.h2
+            data-testid="fact-text"
             key={1}
-            initial={{ opacity: 0, x: "400px" }}
+            initial={{ opacity: 0, x: "400px", maxHeight: "auto" }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: "-400px", maxHeight: "200px", overflow: "hidden" }}
             transition={{

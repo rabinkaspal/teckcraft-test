@@ -15,7 +15,7 @@ export const ButtonLoadNewFact = styled.button`
   font-family: "Rubik", sans-serif;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.05s ease-out;
+  transition: transform 0.05s ease-out;
   user-select: none;
 
   :active {
@@ -24,7 +24,7 @@ export const ButtonLoadNewFact = styled.button`
 
   :hover {
     /* border-radius: 4px; */
-    background-color: #027b70;
+    background-color: #15b133;
     /* box-shadow: 0 0 0 3px #fff, 0 0 0px 5px #027b70; */
   }
 

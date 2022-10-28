@@ -1,10 +1,8 @@
 import React from "react";
-import { useSelector } from "react-redux";
 import LoadingIndicator from "../LoadingIndicator";
 import { ButtonLoadNewFact } from "./Styles";
 
-const CatFactsButton = ({ text, btnOnClick }) => {
-  const loading = useSelector(s => s.factState.isLoading);
+const CatFactsButton = ({ text, btnOnClick, loading }) => {
   return (
     <ButtonLoadNewFact onClick={btnOnClick} disabled={loading}>
       {loading ? (
