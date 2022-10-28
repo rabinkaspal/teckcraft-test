@@ -56,6 +56,12 @@ a:hover {
     text-decoration: underline;
 }
 
+
+p.counter{
+  user-select: none;
+  color: #158119;
+}
+
 `;
 
 export default BaseStyles;

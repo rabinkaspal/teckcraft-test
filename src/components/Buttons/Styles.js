@@ -16,6 +16,7 @@ export const ButtonLoadNewFact = styled.button`
   font-weight: 600;
   cursor: pointer;
   transition: all 0.05s ease-out;
+  user-select: none;
 
   :active {
     transform: scale(0.9);

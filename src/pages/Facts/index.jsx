@@ -3,11 +3,11 @@ import CatFactsButton from "../../components/Buttons";
 import FactCard from "../../components/FactCard";
 import { Container } from "./Styles";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchCatFact } from "../../redux/actions/factActions";
+import { fetchCatFact } from "../../features/catFact/factSlice";
 
 const Facts = () => {
   const dispatch = useDispatch();
-  const apiCallCount = useSelector(state => state.totalApiCallCount);
+  const state = useSelector(state => state.factState);
 
   useEffect(() => {
     dispatch(fetchCatFact());
@@ -18,7 +18,7 @@ const Facts = () => {
       <h1>Cat Facts</h1>
       <FactCard />
       <CatFactsButton text="Get a New Fact" btnOnClick={() => dispatch(fetchCatFact())} />
-      <p className="counter">Total Facts Displayed: {apiCallCount}</p>
+      <p className="counter">Total Facts Displayed: {state.apiCallCount}</p>
     </Container>
   );
 };

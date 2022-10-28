@@ -4,7 +4,7 @@ import LoadingIndicator from "../LoadingIndicator";
 import { ButtonLoadNewFact } from "./Styles";
 
 const CatFactsButton = ({ text, btnOnClick }) => {
-  const loading = useSelector(s => s.apiCallInProgress);
+  const loading = useSelector(s => s.factState.isLoading);
   return (
     <ButtonLoadNewFact onClick={btnOnClick} disabled={loading}>
       {loading ? (

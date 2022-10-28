@@ -5,13 +5,13 @@ import { BiError } from "react-icons/bi";
 import { useSelector } from "react-redux";
 
 const FactCard = () => {
-  const { fact, apiCallInProgress: loading } = useSelector(state => state);
+  const factState = useSelector(state => state.factState);
   return (
     <FactContainer>
-      {loading ? (
+      {factState.isLoading ? (
         <img src={loader} alt="loader animation" />
       ) : (
-        <h2>{fact || <BiError size={120} color="#ec5b2e" />}</h2>
+        <h2>{factState.fact || <BiError size={120} color="#ec5b2e" />}</h2>
       )}
     </FactContainer>
   );

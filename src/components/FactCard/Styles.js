@@ -56,6 +56,7 @@ export const FactContainer = styled.div`
     text-align: center;
     color: #0e5ab0;
     line-height: 1.2;
+    user-select: none;
 
     @media (max-width: 480px) {
       font-size: 2rem;
