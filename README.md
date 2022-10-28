@@ -75,6 +75,6 @@ More tests could be added. As I am very new to testing, it took me longer to fin
 
 
 ## Closing Notes
-I hope my efforts to complete this project are just enough to take me to the next step of the hiring process. Although I am switching careers(previously Mobile Application Developer with Java, and small Web Developers roles), my passion for frontend, UI design and User Experience has always kept me striving for learnig more things frontend. My quest of learning and increasing my knowledge base is still going on and I hope I will be served well.
+I hope my efforts to complete this project are enough to take me to the next step of the hiring process. Although I am switching careers (previously Mobile Application Developer with Java, and few Web Developer roles), my passion for frontend, UI design and User Experience has always kept me striving for learnig more things frontend. My quest of learning and increasing my knowledge base is still going on and I hope I will be served well.
 
 I hope to hear from you soon. Hopefully, good news entails.
