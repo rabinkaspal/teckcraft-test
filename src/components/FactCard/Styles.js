@@ -10,13 +10,13 @@ export const FactContainer = styled.div`
   width: 100%;
   min-height: 300px;
   height: max-content;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   position: relative;
   z-index: 5;
   transition: all 0.4s ease-in-out;
+  transition-delay: 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   @media (max-width: 480px) {
     padding: 20px;
