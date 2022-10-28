@@ -1,6 +1,6 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/21eb27c9-b23e-4847-9e80-8627dfbf12ba/deploy-status)](https://app.netlify.com/sites/teckcraft-catfacts/deploys)
 
-
+![Logo](/public/logo192.png)
 
 # Cat Facts App
 Displays a random fact about cats from [catfact public API](https://catfact.ninja/) \
