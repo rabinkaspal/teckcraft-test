@@ -2,9 +2,11 @@ import { takeEvery, call, put, all, fork } from "redux-saga/effects";
 import * as FactAPI from "../features/catFact/factService";
 import { fetchCatFactFailure, fetchCatFactSuccess } from "../features/catFact/factSlice";
 
-function* fetchCatFact() {
+const catFactsUrl = "https://catfact.ninja/fact?max_length=130";
+
+function* fetchCatFact(url) {
   try {
-    const fact = yield call(FactAPI.getCatFact);
+    const fact = yield call(FactAPI.getCatFact, url);
     if (fact) {
       yield put(fetchCatFactSuccess(fact));
     } else {
@@ -16,7 +18,7 @@ function* fetchCatFact() {
 }
 
 function* catSaga() {
-  yield takeEvery("catfact/fetchCatFact", fetchCatFact);
+  yield takeEvery("catfact/fetchCatFact", fetchCatFact, catFactsUrl);
 }
 
 export { fetchCatFact };

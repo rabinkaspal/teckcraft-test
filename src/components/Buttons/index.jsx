@@ -4,7 +4,7 @@ import { ButtonLoadNewFact } from "./Styles";
 
 const CatFactsButton = ({ text, btnOnClick, loading }) => {
   return (
-    <ButtonLoadNewFact onClick={btnOnClick} disabled={loading}>
+    <ButtonLoadNewFact onClick={btnOnClick} disabled={loading} data-testid="fact-button">
       {loading ? (
         <>
           <LoadingIndicator />

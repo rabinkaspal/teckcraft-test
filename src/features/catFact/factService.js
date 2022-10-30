@@ -1,10 +1,8 @@
 import axios from "axios";
 
-const catFactsUrl = "https://catfact.ninja/fact?max_length=130";
-
-export const getCatFact = async () => {
+export const getCatFact = async url => {
   try {
-    const response = await axios.get(catFactsUrl);
+    const response = await axios.get(url);
     if (response.status === 200) {
       return response.data.fact;
     } else {

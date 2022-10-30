@@ -9,7 +9,7 @@ const FactCard = () => {
   const factState = useSelector(state => state.factState);
   return (
     <FactContainer>
-      <AnimatePresence exitBeforeEnter>
+      <AnimatePresence mode="wait">
         {factState.isLoading ? (
           <motion.img
             initial={{ opacity: 0 }}
@@ -22,9 +22,9 @@ const FactCard = () => {
           <motion.h2
             data-testid="fact-text"
             key={1}
-            initial={{ opacity: 0, x: "400px", maxHeight: "auto" }}
+            initial={{ opacity: 0, x: "400px" }}
             animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: "-400px", maxHeight: "200px", overflow: "hidden" }}
+            exit={{ opacity: 0, x: "-400px", overflow: "hidden" }}
             transition={{
               duration: 0.2,
             }}

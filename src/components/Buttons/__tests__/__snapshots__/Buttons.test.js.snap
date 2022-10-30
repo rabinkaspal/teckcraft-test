@@ -3,6 +3,7 @@
 exports[`Button matches snapshot 1`] = `
 <button
   className="sc-gswNZR bPbNkq"
+  data-testid="fact-button"
 >
   Get a new fact
 </button>
